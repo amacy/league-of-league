@@ -1,7 +1,4 @@
-class FantasyTeam < ActiveRecord::Base
-
-  belongs_to :user
-  belongs_to :week
+class LcsTeam < ActiveRecord::Base
 
   has_one :top,     :class_name => 'LcsPlayer'
   has_one :jungle,  :class_name => 'LcsPlayer'
