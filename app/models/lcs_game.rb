@@ -5,7 +5,7 @@ class LcsGame < ActiveRecord::Base
   has_many :lcs_teams
   has_many :player_stats
 
-  validates_numericality_of :week_id, :winning_team_id, :losing_team_id
+  validates_numericality_of :week_id, :winning_team_id, :losing_team_id, :length
 
   def winner
     @winner ||= LcsTeam.find winning_team_id
